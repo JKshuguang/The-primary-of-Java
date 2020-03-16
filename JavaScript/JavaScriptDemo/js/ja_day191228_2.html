@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JSlearn_2</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				// // 获取id 为 bj 的那个节点
+				// var bjNode = document.getElementById("bj");
+				// alert(bjNode);
+				
+				// // 获得所有的 Li 节点
+				// var liNodes = document.getElementsByTagName("li");
+				// alert(liNodes.length);
+				
+				// //获得城市下的所有的li 节点
+				// var cityNode = document.getElementById("city");
+				// var underCityLiNodes = cityNode.getElementsByTagName("li");
+				// alert(underCityLiNodes.length)
+				
+				// // 通过 getElementsByName 获取节点 用于表单
+				// var genderNodes = document.getElementsByName("gender");
+				// alert(genderNodes.length)
+				
+				// //能否通过 getElementsByName 得到自己定义的 name 属性的节点
+				// //IE不可 谨慎使用
+				// var node = document.getElementsByName("beijing");
+				// alert(node.length)
+				
+				//获取属性节点
+				// 先得到元素节点
+				var nameNode = document.getElementById("name");
+				//通过元素节点来获取属性节点
+				var value = nameNode.value;
+				alert(value);
+				nameNode.value = "HHH";
+				
+			}
+		</script>
+	</head>
+	<body>
+		<p><你喜欢哪个城市/p>
+		<ul id = "city">
+			<li id="bj" name="beijing">北京</li>
+			<li>上海</li>
+			<li>广州</li>
+			<li>贵州</li>
+		</ul>
+		
+		<br><br>
+		
+		<p>你喜欢什么游戏</p>
+		<ul id="game">
+			<li>LOL</li>
+			<li>穿越火线</li>
+			<li>QQ飞车</li>
+			<li>王者荣耀</li>
+		</ul>
+		
+		gender:
+			<input type="radio" name="gender"  value="male" />Male
+			<input type="radio" name="gender"  value="female" />Female
+			
+			<br>
+		name：<input type="text" id="name" value="JXK" />		
+	</body>
+</html>

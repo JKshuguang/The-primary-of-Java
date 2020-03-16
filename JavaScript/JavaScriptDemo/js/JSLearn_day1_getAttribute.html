@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JSlearn_2</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				// // 第一种方式  通过元素节点 . 属性 的方式获取属性节点
+				// var nameNode = document.getElementById("name");
+				// //通过元素节点来获取属性节点
+				// var value = nameNode.value;
+				// alert(value);
+				// // 设置属性节点
+				// nameNode.value = "HHH";
+				
+				// 获取 city 的所有子节点
+				//这种方式会把转行的空白也当作文本域节点来看
+				var cityNode = document.getElementById("city");
+				alert(cityNode.childNodes.length);
+				
+				// 得到city 的所有 li 节点
+				var citynodes2 = cityNode.getElementsByTagName("li");
+				alert(citynodes2.length);
+				
+				//获得指定节点的第一个节点和最后一个节点
+				alert(cityNode.firstChild);
+				alert(cityNode.lastChild);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<p><你喜欢哪个城市/p>
+		<ul id = "city">
+			<li id="bj" name="beijing">北京</li>
+			<li>上海</li>
+			<li>广州</li>
+			<li>贵州</li>
+		</ul>
+		
+		<br><br>
+		
+		<p>你喜欢什么游戏</p>
+		<ul id="game">
+			<li>LOL</li>
+			<li>穿越火线</li>
+			<li>QQ飞车</li>
+			<li>王者荣耀</li>
+		</ul>
+		
+		gender:
+			<input type="radio" name="gender"  value="male" />Male
+			<input type="radio" name="gender"  value="female" />Female
+			
+			<br>
+		name：<input type="text" id="name" value="JXK" />		
+	</body>
+</html>

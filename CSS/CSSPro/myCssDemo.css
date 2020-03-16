@@ -1,0 +1,25 @@
+#c2{
+	font-size: 50px;
+	font-family: "新宋体";
+	color: blueviolet;
+}
+
+.waste1,.waste2,.waste3{
+	color: brown;
+}
+
+/* span{
+	color: blue;
+} */
+
+ul>li{
+	color: gray;
+}
+
+.div1{
+	background-color: yellow;
+	width: 100px;
+	height: 100px;
+	border: black;
+	align-content: center;
+}

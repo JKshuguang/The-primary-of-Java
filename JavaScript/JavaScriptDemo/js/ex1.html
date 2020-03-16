@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>练习1</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				//得到所有的 li 节点
+				var liNodes = document.getElementsByTagName("li");
+				//遍历节点
+				for(var i = 0; i < liNodes.length; i++){
+					//添加响应事件
+					liNodes[i].onclick = function(){
+						alert(this.firstChild.nodeValue);
+					}
+				}
+			
+			}	
+		</script>
+	</head>
+	<body>
+		<p>你喜欢哪个城市</p>
+		<ul id = "city">
+			<li id="bj" name="beijing">北京</li>
+			<li>上海</li>
+			<li>广州</li>
+			<li>贵州</li>
+		</ul>
+		
+		<br><br>
+		
+		<p>你喜欢什么游戏</p>
+		<ul id="game">
+			<li>LOL</li>
+			<li>穿越火线</li>
+			<li>QQ飞车</li>
+			<li>王者荣耀</li>
+		</ul>
+		
+		gender:
+			<input type="radio" name="gender"  value="male" />Male
+			<input type="radio" name="gender"  value="female" />Female
+			
+			<br>
+		name：<input type="text" id="name" value="JXK" />	
+		
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MyFirstCss</title>
+		<!-- 引入 Css 样式表-->
+		<link rel="stylesheet"  href="myCssDemo.css"/>
+		
+		<!-- 内部样式 -->
+		<style type="text/css">
+			#c1{
+				/* 字体大小 */
+				font-size: 40px;
+				/* 字体类型 */
+				font-family: "楷体";
+				/* 字体颜色 */
+				color: red;
+			}
+		</style>
+		
+	</head>
+	<body style="background-color: bisque;">
+		
+		<!-- 形式一 -->
+		<center>
+			<strong style="font-size: 40px; color: aqua; ">我是行内样式</strong>	
+					<hr >
+		</center>
+		
+		<!-- 形式二 -->
+		<center>
+			<strong id="c1">我是内部样式</strong>
+			<hr style="border-width: thick;">
+		</center>
+		
+		<!-- 外部样式 -->
+		<center id="c2">
+			我是外部样式
+		</center>
+		<br>
+		
+		<ul style="align-items: center;">
+			<li class="waste1">抽烟</li>
+			<li class="waste2">喝酒</li>
+			<li class="waste3">烫头</li>
+			<li class="waste4">蹦迪</li>
+		</ul>
+		<hr >
+		
+		<!-- 盒子 -->
+		<div class="div1">
+			Box1  
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>input a title there</title>
+		<!-- 写 javaScript 代码 -->
+		<script type="text/javascript">
+			// 加载文档
+			window.onload = function(){
+				// 得到标签名为 “button” 的所有按钮，并返回第一个
+				var btn = document.getElementsByTagName("button")[0];
+				//设置 OnClick 事件，弹出 “Hello,World!”
+				btn.onclick = function(){
+					alert("Hello,World!");	
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<!-- 创建一个按钮 -->
+		<button> click me</button>
+	</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>正则表达式</title>
+		<script type="text/javascript">
+			window.onload = function(){
+				// var reg = new RegExp("a","i");
+				// var str = "babc";
+				// document.write(reg.test(str));
+				// var str2 = "bbc";
+				// document.write(reg.test(str2));
+				// var str3 = "Abb";
+				// document.write(reg.test(str3));
+				
+				// 检查一个字符串中是否有a 或者 b
+				// var reg = /a|b/ ;
+				// var str1 = "dfdf";
+				// document.write(reg.test(str1));
+				// var str2 = "adfdf";
+				// document.write(reg.test(str2));
+				
+				//检查一个字符串中是否有字母
+				// var reg = /[a-zA-Z]/;
+				// var str1 = "34343";
+				// document.write(reg.test(str1));
+				// var str2 = "d34e3";
+				// document.write(reg.test(str2));
+				// var str3 = "ASDFF";
+				// document.write(reg.test(str3));
+				
+				// 检查一个字符串中是否有 abc ,adc,或，aec
+				// var reg = /a[bde]c/;
+				// var str1 = "dfabcd";
+				// document.write(reg.test(str1));
+				// var str2 = "efebaec";
+				// document.write(reg.test(str2));
+				// var str3 = "eeeadc";
+				// document.write(reg.test(str3));
+				// var str4 = "abadaee";
+				// document.write(reg.test(str4));
+				
+				//[^]表示除了
+				//判断一个字符串是否不仅仅包括a和b
+				// var reg = /[^ab]/;
+				// var str1 = "a";
+				// document.write(reg.test(str1));
+				// var str2 = "b";
+				// document.write(reg.test(str2));
+				// var str3 = "ab";
+				// document.write(reg.test(str3));
+				// var str4 = "fdfdfdf";
+				// document.write(reg.test(str4));
+				
+				// 判断一个字符串是否全为数字
+				// var reg = /[^0-9]/;
+				// var str1 = "3fee";
+				// document.write(reg.test(str1));
+				// var str2 = "dfdfd";
+				// document.write(reg.test(str2));
+				// var str3 = "330434";
+				// document.write(reg.test(str3));
+				
+				//按小写字母拆分字符串
+				// var str = "1a2b3c4d5e6f7g8h9i0z";
+				// var result = str.split(/[a-z]/);
+				// document.write(result);
+				
+				//返回第一次出现的索引，没有返回-1
+				// var str = "hello abc hello abc abd";
+				// var result = str.search("abc");
+				// document.write(result);
+				
+				// var str2 = "ni shi zhu ma ?"
+				// var result2 = str2.search("heng");
+				// document.write(result2);
+				
+				// 找到符合条件的内容
+				// var str = "1a2b3c4d5E6F7g8h9i0z";
+				// var result = str.match(/[a=z]/);
+				// 	// document.write(result);
+				// 	// result = str.match(/[a-z]/g);
+				// 	// document.write(result);
+				// 	result = str.match(/[a-z]/gi);
+				// 	document.write(result);
+				
+					//替换
+					// var str = "1a2b3c4d5e6f7g8h9i0j";
+					// var result = str.replace(/[a]/gi,"@_@");
+					// 	// document.write(result);
+						
+					// 	result = str.replace(/[a-z]/g,"");
+					// 	document.write(result);
+					
+				// var reg = /a\\/g;
+				// var str = "a\\";
+				// document.write(reg.test(str));
+				
+				// 找出一句话中是否有单词 child
+				// var reg = /\bchild\b/;
+				// var str = "fdafj child"
+				// document.write(reg.test(str));
+				
+				// 去掉字符串中的空格
+				var str = "        hello   ";
+				document.write(str.length);
+				str = str.replace(/\s/g,"");
+				document.write(str.length);
+				
+				//去掉尾部的空格
+				// var str = "   hello ";
+				// document.write(str.length);
+				// str = str.replace(/\s*$/g,"")
+				// document.write(str.length)
+				
+				//去掉两侧空格
+				// var str = "   hello ";
+				// document.write(str.length);
+				// str = str.replace(/^\s*|\s*$/g,"")
+				// document.write(str.length)
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<ul>
+			<li>\w ----------代表任意字母、数字、下划线</li>
+			<li>\W ----------代表除了字母数字下划线的东西</li>
+			<li>\d ----------代表任意数字，即[0-9]</li>
+			<li>\D ----------代表除了数字，即[^0-9]</li>
+			<li>\s ----------代表空格</li>
+			<li>\S ----------代表除了空格</li>
+			<li>\b ----------代表单词边界</li>
+			<li>\B ----------代表除了单词边界</li>
+		</ul>
+		
+		<ul>
+		<li>是否含有 aaa --------reg = /a{3}/</li>
+		<li>是否含有 ababab	----reg=/(ab){3}/</li>
+		<li>是否含有ab,出现1-3次--reg = /(ab){1,3}/</li>
+		<li>+ 表示至少一个 -------{1,}</li>
+		<li>* 表示0个或者多个 ----{0,}</li>
+		<li>? 表示0个或者1个------{0,1}</li>
+		<li>检查是否以 a 开头------reg = /^a/</li>
+		<li>检查是否以 a 结尾------reg = /a$/</li>
+		<li>任意字符---------------reg = /./</li>
+		<li>检查是否有'\' ---------reg = /\\/</li>
+		</ul>
+	</body>
+</html>
